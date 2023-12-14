@@ -8,10 +8,6 @@ export const cost2 = 10000000009000
 const label1 =document.querySelector(".cnt1")
 const label2 =document.querySelector(".cnt2")
 
-
-
-
-
 add1.addEventListener( "click",()=>{
     label1.innerHTML++
     setVals()
@@ -23,15 +19,21 @@ if(label1.innerHTML>0){
     setVals()
 }
 })
+
+add2.addEventListener( "click",()=>{
+    label2.innerHTML++
+    setVals()
+})
+
+sub2.addEventListener( "click",()=>{
+if(label2.innerHTML>0){
+    label2.innerHTML--
+    setVals()
+}
+})
+
 function setVals(){
     localStorage.setItem("tot1", label1.innerHTML)
     localStorage.setItem("tot2", label2.innerHTML)
 }
-
-
-
-
-
-
-
 
